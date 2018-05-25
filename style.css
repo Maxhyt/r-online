@@ -1,0 +1,43 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+table,
+textarea {
+  height: 100%;
+}
+
+textarea#console {
+  background-color: #000;
+  font-family: "Lucida Console";
+  color: white;
+  border: 2px solid grey;
+  resize: none;
+  width: 100%;
+  margin-left: -5px;
+  margin-top: -1px;
+  max-height: 84vh;
+}
+
+textarea#console, #rows, #output {
+  line-height: 20px;
+}
+
+td {
+  vertical-align: top;
+}
+
+#output {
+  padding-left: 10px;
+  font-family: "Lucida Console";
+  overflow-y: scroll;
+  max-height: 84vh;
+  height: 84vh;
+}
+
+th {
+  font-size: 20px;
+}
