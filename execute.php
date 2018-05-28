@@ -15,12 +15,14 @@ if (isset($_POST["command"]))
 
   $stderr = stream_get_contents($pipes[2]);
   fclose($pipes[2]);
+  
+  echo "<b><i>R project output</i></b><br><br>";
 
   $commands = explode("\n", $_POST["command"]);
 
-  for ($i = 0; $i < sizeof($commands); $i++)
+  for ($i = 0; $i < sizeof($commands); ++$i)
   {
-    echo "<b>R> ".$commands[$i]."</b><br>";
+    echo "<b>> ".$commands[$i]."</b><br>";
   }
 
   echo nl2br(preg_replace("/_(\w('|-?))/","<u>$1</u>",$stdout).$stderr);
