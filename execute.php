@@ -22,7 +22,8 @@ if (isset($_POST["command"]))
 
   for ($i = 0; $i < sizeof($commands); ++$i)
   {
-    echo "<b>> ".$commands[$i]."</b><br>";
+    if (!empty($commands[$i]))
+     echo "<b>> ".$commands[$i]."</b><br>";
   }
 
   echo nl2br(preg_replace("/_(\w('|-?))/","<u>$1</u>",$stdout).$stderr);
